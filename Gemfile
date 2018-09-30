@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.6"
+
 # bundler
 gem 'bundler', '>= 1.8.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -8,8 +10,7 @@ gem 'rails', '4.2.5'
 gem 'lerolero_generator'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n', '~> 4.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,6 +48,9 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Rails >= 3 pry initializer
   gem 'pry-rails'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -80,3 +84,9 @@ gem 'rails-assets-notifyjs', source: 'http://insecure.rails-assets.org'
 gem 'rails-assets-bootstrap', source: 'http://insecure.rails-assets.org'
 gem 'rails-assets-font-awsome', '4.7.0', source: 'http://insecure.rails-assets.org'
 gem 'rails-assets-glyphicons',  source: 'http://insecure.rails-assets.org'
+
+# Heroku dependecy
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
