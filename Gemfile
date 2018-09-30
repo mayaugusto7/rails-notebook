@@ -5,12 +5,11 @@ ruby '2.4.4'
 # bundler
 gem 'bundler', '>= 1.8.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.8'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n', '~> 4.0'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,9 +47,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Rails >= 3 pry initializer
   gem 'pry-rails'
-
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
